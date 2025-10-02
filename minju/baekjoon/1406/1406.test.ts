@@ -5,7 +5,7 @@ import { describe, it, expect } from "vitest";
 
 import { runBaekjoonTest } from "../../testHelper.js";
 
-const FILE_NAME = __filename.split("/").pop()?.split(".")[0];
+const FILE_NAME ='1406';
 
 describe("백준 1406번 - 공식 테스트 케이스", async () => {
   it("예제 1: abcd에 P x, L, P y 명령", async () => {
