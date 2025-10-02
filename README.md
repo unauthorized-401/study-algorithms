@@ -24,8 +24,8 @@
 8. 각자 디렉토리는 알아서 꾸리기
 
 ### 📚 멤버
-|  | 민주 | 지원 |
-|----|------|------|
-| 프로필 | <img src="https://github.com/min-99.png" width="100" /> | <img src="https://github.com/unauthorized-401.png" width="100" /> |
-| 깃헙 | [min-99](https://github.com/min-99) | [unauthorized-401](https://github.com/unauthorized-401) |
-| 언어 | TypeScript | Java |
+|  | 민주 | 지원                                                              |
+|----|------|-----------------------------------------------------------------|
+| 프로필 | <img src="https://github.com/min-99.png" width="100" /> | <img src="https://github.com/moonlight-duck.png" width="100" /> |
+| 깃헙 | [min-99](https://github.com/min-99) | [moonlight-duck](https://github.com/unauthorized-401)           |
+| 언어 | TypeScript | Java                                                            |
