@@ -6,7 +6,6 @@ import { promisify } from "util";
 
 const execAsync = promisify(exec);
 
-
 export async function runBaekjoonTest(
   input: string,
   fileName: string | undefined
@@ -22,14 +21,25 @@ export async function runBaekjoonTest(
 
     const { stdout } = await execAsync(command);
 
-    // 결과 확인 (마지막 줄이 최종 결과)
-    const result = stdout.trim().split("\n").pop();
+    // 결과 확인 (npm 스크립트 메시지 제거하고 실제 출력만 반환)
+    const lines = stdout.trim().split("\n");
 
-    if (!result) {
+    // npm 스크립트 실행 메시지들을 제거하고 실제 프로그램 출력만 필터링
+    const resultLines = lines.filter(
+      (line) =>
+        line.trim() &&
+        !line.startsWith("> ") &&
+        !line.includes("minju@") &&
+        !line.includes("cd baekjoon") &&
+        !line.includes("scripts/run.sh") &&
+        !line.includes("scripts/test.sh")
+    );
+
+    if (resultLines.length === 0) {
       throw new Error("실행 결과가 비어있습니다");
     }
 
-    return result;
+    return resultLines.join("\n");
   } catch (error) {
     throw new Error(`테스트 실행 실패: ${error}`);
   }
